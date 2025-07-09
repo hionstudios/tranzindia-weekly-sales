@@ -1,61 +1,70 @@
 "use client";
 
-import { Box, Container } from "@mui/material";
-import YouTube from "react-youtube";
+import { Box, Container, Button } from "@mui/material";
+import { useRef, useState } from "react";
 
-export default function Youtupevideo() {
+export default function LocalVideo() {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((err) => {
+        console.error("Play error:", err);
+      });
+      setIsPlaying(true);
+    }
+  };
+
   return (
-    <>
-      <Container>
-        <Box height="calc(100vh - 90px)" alignContent="center" pt={5}>
-          <Box textAlign="center" display={{ xs: "none", md: "block" }}>
-            <YouTube
-              loading="eager"
-              videoId="tjXsBWNJlYU"
-              id="ytplayer"
-              opts={{
-                width: "100%",
-                height: "600px",
-                playerVars: {
-                  autoplay: true,
-                  modestbranding: 1,
-                  controls: 0,
-                  enablejsapi: 1,
-                  rel: 0,
-                },
-              }}
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </Box>{" "}
-          <Box textAlign="center" display={{ xs: "block", md: "none" }}>
-            <YouTube
-              loading="eager"
-              videoId="tjXsBWNJlYU"
-              id="ytplayer"
-              opts={{
-                width: "100%",
-                height: "400px",
-                playerVars: {
-                  autoplay: true,
-                  modestbranding: 1,
-                  controls: 0,
-                  enablejsapi: 1,
-                  rel: 0,
-                },
-              }}
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </Box>
-        </Box>
-      </Container>
-    </>
+    <Container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        position: "relative",
+      }}
+    >
+      <Box
+        sx={{
+          position: "relative",
+          width: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <video
+          ref={videoRef}
+          src="/video.mp4"
+          preload="auto"
+          controls={false}
+          playsInline
+          loop
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+        {!isPlaying && (
+          <Button
+            variant="contained"
+            color="error"
+            onClick={handlePlay}
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              zIndex: 10,
+              borderRadius: 2,
+              px: 2,
+            }}
+          >
+            ▶
+          </Button>
+        )}
+      </Box>
+    </Container>
   );
 }
-
-//https://youtu.be/tjXsBWNJlYU
