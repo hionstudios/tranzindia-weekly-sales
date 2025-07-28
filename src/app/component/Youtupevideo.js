@@ -44,7 +44,7 @@ export default function LocalVideo() {
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
-          title="Tranzindia"
+          title="Tranzindia BBS"
         ></iframe>
       </Box>
     </Container>
