@@ -45,7 +45,8 @@ export default function LocalVideo() {
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
           title="Tranzindia BBS"
-        ></iframe>
+        >
+        </iframe>
       </Box>
     </Container>
   );
