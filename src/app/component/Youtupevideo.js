@@ -44,7 +44,6 @@ export default function LocalVideo() {
           }}
           title="Tranzindia BBS"
         ></iframe>
-        
       </Box>
     </Container>
   );
