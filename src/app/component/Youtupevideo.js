@@ -14,28 +14,15 @@ export default function LocalVideo() {
   }, []);
 
   return (
-    <Container
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100dvh",
-        position: "relative",
-      }}
+    <Container position= "relative"
     >
-      <Box
-        sx={{
-          width: "100%",
-          paddingTop: "56.25%",
-          position: "relative",
-        }}
-      >
+      <Box width="100%">
         <iframe
           src="https://player.vimeo.com/video/1105696971?dnd=1"
           frameBorder="0"
           allow="autoplay;"
           referrerPolicy="strict-origin-when-cross-origin"
-           style={{
+          style={{
             position: "absolute",
             top: 0,
             left: 0,
