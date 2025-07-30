@@ -7,10 +7,10 @@ const meta = pathname => {
     index = true,
     follow = true,
     nocache = true,
-    og = "/og.png"
-  } = metadata[pathname];
+    og = "/og-image.webp"
+  } = metadata[pathname];   
 
-  const url = "https://tranzindia-walkthrough.vercel.app";
+  const url = "https://walkthrough.tranzindia.in";
 
   return {
         category: 'technology',
