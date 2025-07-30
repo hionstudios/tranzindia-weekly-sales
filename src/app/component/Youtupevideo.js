@@ -29,8 +29,7 @@ export default function LocalVideo() {
             width: "100%",
             height: "100%",
           }}
-          title="Tranzindia"
-          
+          title="Tranzindia"   
         ></iframe>
       </Box>
     </Container>
