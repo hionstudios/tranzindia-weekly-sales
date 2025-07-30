@@ -10,7 +10,7 @@ const meta = pathname => {
     og = "/og.png"
   } = metadata[pathname];
 
-  const url = "https://walkthrough.tranzindia.in";
+  const url = "https://tranzindia-walkthrough.vercel.app";
 
   return {
         category: 'technology',
