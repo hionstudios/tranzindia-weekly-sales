@@ -31,19 +31,17 @@ export default function LocalVideo() {
         }}
       >
         <iframe
-          src="https://player.vimeo.com/video/1105070124?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+          src="https://player.vimeo.com/video/1105070124?&dnt=1"
           frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-           style={{
+          allow="autoplay;"
+          style={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
           }}
-          title="Tranzindia BBS"
-        ></iframe>
+          title="Tranzindia"></iframe>
       </Box>
     </Container>
   );
