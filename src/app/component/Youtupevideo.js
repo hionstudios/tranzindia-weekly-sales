@@ -18,7 +18,7 @@ export default function LocalVideo() {
     >
       <Box width="100%">
         <iframe
-          src="https://player.vimeo.com/video/1105696971?dnd=1"
+          src="https://player.vimeo.com/video/1105696971?&dnt=1"
           frameBorder="0"
           allow="autoplay;"
           referrerPolicy="strict-origin-when-cross-origin"
