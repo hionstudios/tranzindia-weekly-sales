@@ -18,7 +18,11 @@ export default function LocalVideo() {
     >
       <Box width="100%">
         <iframe
+<<<<<<< Updated upstream
           src="https://player.vimeo.com/video/1105696971?&dnt=1"
+=======
+          src="https://player.vimeo.com/video/1105696971?dnd=0"
+>>>>>>> Stashed changes
           frameBorder="0"
           allow="autoplay;"
           referrerPolicy="strict-origin-when-cross-origin"
