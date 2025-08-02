@@ -10,7 +10,7 @@ const meta = pathname => {
     og = "/og-image.webp"
   } = metadata[pathname];   
 
-  const url = "https://walkthrough.tranzindia.in";
+  const url = "https://weekly-sales.tranzindia.in";
 
   return {
         category: 'technology',
